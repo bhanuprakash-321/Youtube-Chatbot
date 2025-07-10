@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-google-genai
+langchain-community
+google-api-python-client
+faiss-cpu
+youtube-transcript-api
+python-dotenv
+langdetect
