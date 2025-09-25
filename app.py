@@ -18,6 +18,7 @@ load_dotenv()
 gemini_key = os.getenv("Gemini_key")
 os.environ["GOOGLE_API_KEY"] = gemini_key  
 
+
 # Streamlit setup
 st.set_page_config(page_title="YouTube Chatbot", layout="centered")
 st.markdown(css, unsafe_allow_html=True)
@@ -35,6 +36,7 @@ video_id = st.text_input("Enter YouTube Video ID:")
 def get_transcript_and_lang(video_id):
     transcripts = YouTubeTranscriptApi.list_transcripts(video_id)
     transcript_obj = None
+    
 
     for t in transcripts:
         if not t.is_generated:
